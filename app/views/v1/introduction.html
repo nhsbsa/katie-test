@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+<!-- Add the following line to add to the class of the block content container  
+change the # to ∞ to uncomment -->
+{# set containerClasses = "nhsuk-width-container-fluid" #} 
+
+
+{% block pageTitle %}
+    Testing Prototype - Katie Twinn
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h1 class="nhsuk-heading-xl">Test Prototype</h1>
+
+    <p class="nhsuk-body-l">This is a test prototype created by Katie Twinn.</p>
+    <p class="nhsuk-body">For this test I am going to create a form through steps for a change of address.</p>
+
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            <span class="nhsuk-details__summary-text">
+              Version 1 of Prototype
+            </span>
+          </div>
+          <div class="nhsuk-grid-column-one-third nhsuk-u-text-align-right">
+            <strong class="nhsuk-tag nhsuk-tag--blue">NEW</strong>
+          </div>
+        </div>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>This is the initial prototype before iteration.</p>
+        <p>The process needs to be simple for the user to use and fully accessible. </p>
+        <div class="nhsuk-action-link">
+          <a class="nhsuk-action-link__link" href="/v1/start">
+            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+            </svg>
+            <span class="nhsuk-action-link__text">View Prototype V1</span>
+          </a>
+        </div>
+      </div>
+    </details>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
+
