@@ -1,7 +1,10 @@
 {% extends 'layout.html' %}
+<!-- Add the following line to add to the class of the block content container  
+change the # to ∞ to uncomment -->
+{% set mainClasses = "nhsuk-u-padding-top-4" %}
 
 {% block pageTitle %}
-  What is your address? | Testing Prototype - Katie Twinn
+What is your address? | Testing Prototype - Katie Twinn
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,86 +15,86 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
 
-      {{ backLink({
-          "href": "javascript:history.go(-1)",
-          "text": "Go back"
-      }) }}
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
 
   </div>
 </div>
 
-  <div class="nhsuk-grid-row">
+<div class="nhsuk-grid-row">
 
-    <div class="nhsuk-grid-column-two-thirds">
+  <div class="nhsuk-grid-column-two-thirds">
 
-        <form action="v4/unsolicited/change/address/new-address" method="post" novalidate>
-      
-          {% call fieldset({
-            legend: {
-              "text": "What is your new address?",
-              "classes": "nhsuk-fieldset__legend--l",
-              "isPageHeading": true
-            }
-          }) %}
-          
-            {{ input({
-              label: {
-                "text": 'Address line 1'
-              },
-              "classes": "nhsuk-input--width-20",
-              "id": "new-address-line-1",
-              "name": "new-address-line-1",
-              "autocomplete": "address-line1"
-            }) }}
-          
-            {{ input({
-              label: {
-                "text": 'Address line 2 (optional)'
-              },
-              "classes": "nhsuk-input--width-20",
-              "id": "new-address-line-2",
-              "name": "new-address-line-2",
-              "autocomplete": "address-line2"
-            }) }}
-          
-            {{ input({
-              label: {
-                "text": "Town or city"
-              },
-              "classes": "nhsuk-input--width-20",
-              "id": "new-address-town",
-              "name": "new-address-town",
-              "autocomplete": "address-level2"
-            }) }}
-          
-            {{ input({
-              label: {
-                "text": "County (optional)"
-              },
-              "classes": "nhsuk-input--width-20",
-              "id": "new-address-county",
-              "name": "new-address-county"
-            }) }}
-          
-            {{ input({
-              label: {
-                "text": "Postcode"
-              },
-              "classes": "nhsuk-input--width-10",
-              "id": "new-address-postcode",
-              "name": "new-address-postcode",
-              "autocomplete": "postal-code"
-            }) }}
-          
-          {% endcall %}
+    <form action="v1/new-address" method="post" novalidate>
 
-        {{ button({
-          "text": "Continue"
-        }) }}
+      {% call fieldset({
+      legend: {
+      "text": "What is your new address?",
+      "classes": "nhsuk-fieldset__legend--l",
+      "isPageHeading": true
+      }
+      }) %}
 
-      </form>
+      {{ input({
+      label: {
+      "text": 'Address line 1'
+      },
+      "classes": "nhsuk-input--width-20",
+      "id": "new-address-line-1",
+      "name": "new-address-line-1",
+      "autocomplete": "address-line1"
+      }) }}
 
-    </div>  
+      {{ input({
+      label: {
+      "text": 'Address line 2 (optional)'
+      },
+      "classes": "nhsuk-input--width-20",
+      "id": "new-address-line-2",
+      "name": "new-address-line-2",
+      "autocomplete": "address-line2"
+      }) }}
+
+      {{ input({
+      label: {
+      "text": "Town or city"
+      },
+      "classes": "nhsuk-input--width-20",
+      "id": "new-address-town",
+      "name": "new-address-town",
+      "autocomplete": "address-level2"
+      }) }}
+
+      {{ input({
+      label: {
+      "text": "County (optional)"
+      },
+      "classes": "nhsuk-input--width-20",
+      "id": "new-address-county",
+      "name": "new-address-county"
+      }) }}
+
+      {{ input({
+      label: {
+      "text": "Postcode"
+      },
+      "classes": "nhsuk-input--width-10",
+      "id": "new-address-postcode",
+      "name": "new-address-postcode",
+      "autocomplete": "postal-code"
+      }) }}
+
+      {% endcall %}
+
+      {{ button({
+      "text": "Continue"
+      }) }}
+
+    </form>
 
   </div>
+
+</div>
 {% endblock %}

@@ -2,11 +2,11 @@
 
 <!-- Add the following line to add to the class of the block content container  
 change the # to ∞ to uncomment -->
-{% set mainClasses = "nhsuk-u-padding-top-4" %} 
+{% set mainClasses = "nhsuk-u-padding-top-4" %}
 
 
 {% block pageTitle %}
-    Start | Testing Prototype - Katie Twinn
+Start | Testing Prototype - Katie Twinn
 {% endblock %}
 
 
@@ -15,14 +15,15 @@ change the # to ∞ to uncomment -->
   <div class="nhsuk-grid-column-two-thirds">
 
     {{ backLink({
-      "href": "javascript:history.go(-1)",
-      "text": "Go back"
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
     }) }}
 
     <h1 class="nhsuk-heading-xl">Before you start</h1>
 
-    <p class="nhsuk-body-l">Whilst completing this form you will be required to provide details relating to the user account which is being updated.</p>
-    
+    <p class="nhsuk-body-l">Whilst completing this form you will be required to provide details relating to the user
+      account which is being updated.</p>
+
     <div class="nhsuk-warning-callout">
       <h3 class="nhsuk-warning-callout__label">
         <span role="text">
@@ -30,7 +31,8 @@ change the # to ∞ to uncomment -->
           Important
         </span>
       </h3>
-      <p>You will need a copy of the following information/documents to complete this online form, please make sure you have them to hand:</p>
+      <p>You will need a copy of the following information/documents to complete this online form, please make sure you
+        have them to hand:</p>
       <ul>
         <li>Full Name</li>
         <li>NHS Number</li>
@@ -39,9 +41,9 @@ change the # to ∞ to uncomment -->
       </ul>
     </div>
 
-    <form action="/v1/start" method="post">
+    <form action="v1/start" method="post">
       <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-          Start
+        Start
       </button>
     </form>
 
@@ -49,4 +51,3 @@ change the # to ∞ to uncomment -->
 </div>
 
 {% endblock %}
-

@@ -6,7 +6,7 @@ change the # to ∞ to uncomment -->
 
 
 {% block pageTitle %}
-  Step 3 - Date of Birth | Testing Prototype - Katie Twinn
+  Step 5 - New Address | Testing Prototype - Katie Twinn
 {% endblock %}
 
 {% block content %}
@@ -18,7 +18,7 @@ change the # to ∞ to uncomment -->
       "text": "Go back"
     }) }}
 
-    <form action="/v1/step-5-new-address" method="post" novalidate>
+    <form action="v1/step-5-new-address" method="post" novalidate>
         
       {% call fieldset({
         legend: {
@@ -44,7 +44,7 @@ change the # to ∞ to uncomment -->
       {% endcall %}
 
       <div class="nhsuk-form-group">
-          <p><a href="/v1/new-address">Enter your new address manually</a></p>
+          <p><a href="new-address">Enter your new address manually</a></p>
       </div>
 
       {{ button({

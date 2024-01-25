@@ -1,4 +1,7 @@
 {% extends 'layout.html' %}
+<!-- Add the following line to add to the class of the block content container  
+change the # to ∞ to uncomment -->
+{% set mainClasses = "nhsuk-u-padding-top-4" %}
 
 {% block pageTitle %}
 Select your address | Testing Prototype - Katie Twinn
@@ -7,22 +10,23 @@ Select your address | Testing Prototype - Katie Twinn
 {% block content %}
 
 <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-  
-        {{ backLink({
-            "href": "javascript:history.go(-1)",
-            "text": "Go back"
-        }) }}
-  
-    </div>
+  <div class="nhsuk-grid-column-two-thirds">
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
   </div>
+</div>
 
 <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+  <div class="nhsuk-grid-column-two-thirds">
 
-      <p>{{ data['newAddresses'] | length }} {% if (data['newAddresses'] | length > 1)  %}addresses{% else %}address{% endif %} found for {{ data['postcodeNew'] }}. <a href="find-address">Search again</a></p>
+    <p>{{ data['newAddresses'] | length }} {% if (data['newAddresses'] | length > 1) %}addresses{% else %}address{%
+      endif %} found for {{ data['postcodeNew'] }}. <a href="find-address">Search again</a></p>
 
-      <form action="v4/unsolicited/change/address/select-new-address" method="post" novalidate>
+    <form action="v1/select-new-address" method="post" novalidate>
 
       <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -30,36 +34,37 @@ Select your address | Testing Prototype - Katie Twinn
             Select an address
           </h1>
         </legend>
-      
+
         <div class="nhsuk-form-group">
-      
+
           <div class="nhsuk-radios">
 
             {% for newAddress in data['newAddresses'] %}
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="{{ newAddress }}" name="newAddress" type="radio" value="{{ newAddress }}">
+              <input class="nhsuk-radios__input" id="{{ newAddress }}" name="newAddress" type="radio"
+                value="{{ newAddress }}">
               <label class="nhsuk-label nhsuk-radios__label" for="{{ newAddress }}">
                 {{ newAddress }}
               </label>
             </div>
             {% endfor %}
-      
+
           </div>
         </div>
-      
+
       </fieldset>
 
       {{ button({
-        "text": "Use this new address"
+      "text": "Use this new address"
       }) }}
 
-      </form>
+    </form>
 
-      <div class="nhsuk-form-group">
-        <p><a href="new-address">Enter your new address manually</a></p>
-      </div>
-
+    <div class="nhsuk-form-group">
+      <p><a href="v1/new-address">Enter your new address manually</a></p>
     </div>
+
+  </div>
 </div>
 
 {% endblock %}

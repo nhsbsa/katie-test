@@ -1,34 +1,38 @@
 {% extends 'layout.html' %}
+<!-- Add the following line to add to the class of the block content container  
+change the # to ∞ to uncomment -->
+{% set mainClasses = "nhsuk-u-padding-top-4" %}
 
 {% block pageTitle %}
-  What is your reference number? | Testing Prototype - Katie Twinn
+What is your reference number? | Testing Prototype - Katie Twinn
 {% endblock %}
 
 {% block content %}
 
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-  
+
         {{ backLink({
-            "href": "javascript:history.go(-1)",
-            "text": "Go back"
+        "href": "javascript:history.go(-1)",
+        "text": "Go back"
         }) }}
-  
+
     </div>
-  </div>
+</div>
 
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
         <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-5">
-            No results found for that {% if (data['housenumber']) and (data['postcode']) %}building number or name and postcode{% else %}postcode{% endif %}
+            No results found for that {% if (data['housenumber']) and (data['postcode']) %}building number or name and
+            postcode{% else %}postcode{% endif %}
         </h1>
 
         <dl class="nhsuk-summary-list">
 
 
 
-{% if data['housenumber'] %}
+            {% if data['housenumber'] %}
 
             <div class="nhsuk-summary-list__row">
                 <dt class="nhsuk-summary-list__key">
@@ -40,15 +44,16 @@
 
                 <dd class="nhsuk-summary-list__actions">
 
-                    <a href="find-address#housenumber">
-                        Change<span class="nhsuk-u-visually-hidden"> {% if data['applyingfor'] == "someoneelse" %}their{% else %}your{% endif %} house number or name</span>
+                    <a href="v1/step-4-previous-address#housenumber">
+                        Change<span class="nhsuk-u-visually-hidden"> {% if data['applyingfor'] == "someoneelse"
+                            %}their{% else %}your{% endif %} house number or name</span>
                     </a>
 
                 </dd>
 
             </div>
 
-{% endif %}
+            {% endif %}
 
 
             <div class="nhsuk-summary-list__row">
@@ -61,8 +66,9 @@
 
                 <dd class="nhsuk-summary-list__actions">
 
-                    <a href="find-address#postcode">
-                        Change<span class="nhsuk-u-visually-hidden"> {% if data['applyingfor'] == "someoneelse" %}their{% else %}your{% endif %} postcode</span>
+                    <a href="v1/step-4-previous-#postcode">
+                        Change<span class="nhsuk-u-visually-hidden"> {% if data['applyingfor'] == "someoneelse"
+                            %}their{% else %}your{% endif %} postcode</span>
                     </a>
 
                 </dd>
@@ -71,7 +77,10 @@
 
         </dl>
 
-        <p><a href="previous-address">Enter {% if data['applyingfor'] == "someoneelse" %}their{% else %}your{% endif %} address manually</a> if {% if data['applyingfor'] == "someoneelse" %}they're{% else %}you're{% endif %} sure the information {% if data['applyingfor'] == "someoneelse" %}they{% else %}you{% endif %} gave is correct.</p>
+        <p><a href="v1/previous-address">Enter {% if data['applyingfor'] == "someoneelse" %}their{% else %}your{% endif
+                %} address manually</a> if {% if data['applyingfor'] == "someoneelse" %}they're{% else %}you're{% endif
+            %} sure the information {% if data['applyingfor'] == "someoneelse" %}they{% else %}you{% endif %} gave is
+            correct.</p>
 
 
 

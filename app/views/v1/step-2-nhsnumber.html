@@ -2,7 +2,7 @@
 
 <!-- Add the following line to add to the class of the block content container  
 change the # to ∞ to uncomment -->
-{% set mainClasses = "nhsuk-u-padding-top-4" %} 
+{% set mainClasses = "nhsuk-u-padding-top-4" %}
 
 
 {% block pageTitle %}
@@ -14,11 +14,11 @@ Step 2 - NHS Number | Testing Prototype - Katie Twinn
   <div class="nhsuk-grid-column-two-thirds">
 
     {{ backLink({
-      "href": "javascript:history.go(-1)",
-      "text": "Go back"
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
     }) }}
 
-    <form action="/v1/step-2-nhsnumber" method="post">
+    <form action="v1/step-2-nhsnumber" method="post">
       <fieldset class="nhsuk-fieldset">
 
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -39,7 +39,7 @@ Step 2 - NHS Number | Testing Prototype - Katie Twinn
         </div>
 
         <button class="nhsuk-button">
-            Continue
+          Continue
         </button>
 
       </fieldset>
@@ -50,4 +50,3 @@ Step 2 - NHS Number | Testing Prototype - Katie Twinn
 </div>
 
 {% endblock %}
-
