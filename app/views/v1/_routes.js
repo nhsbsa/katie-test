@@ -196,19 +196,72 @@ router.post('/v1/confirm', function (req, res) {
     var confirmAddress = req.session.data['confirm-address'];
 
     if (confirmAddress == "Yes") {
-        res.redirect('/v1/step-review');
+        res.redirect('/v1/step-6-supporting-document');
     } else {
         res.redirect('/v1/confirm');
     }
 
 })
 
-// Review to Completion
+// Supporting Documents
+
+router.post('/v1/step-6-supporting-document', function (req, res) {
+
+    res.redirect('/v1/step-7-documents-added');
+
+})
+
+router.post('/v1/step-7-documents-added', function (req, res) {
+
+    res.redirect('/v1/step-review');
+
+})
+
+// Review to Contact Method
 
 router.post('/v1/step-review', function (req, res) {
+    res.redirect('/v1/contact-method');
+})
+
+// Preferred Method of Contact
+
+
+router.post('/v1/contact-method', function (req, res) {
+
+    var contactMethod = req.session.data['contact'];
+
+    if (contactMethod == "By Email") {
+        res.redirect('/v1/contact-email');
+
+    } 
+    if (contactMethod == "By Telephone") {
+        res.redirect('/v1/contact-telephone');
+    } 
+    if (contactMethod == "By Text Message") {
+        res.redirect('/v1/contact-textmsg');
+    } 
+    if (contactMethod == "By Post") {
+        res.redirect('/v1/step-completion');
+    }
+
+})
+
+// Email to Completion
+
+router.post('/v1/contact-email', function (req, res) {
     res.redirect('/v1/step-completion');
 })
 
+// Telephone to Completion
 
+router.post('/v1/contact-telephone', function (req, res) {
+    res.redirect('/v1/step-completion');
+})
+
+// Mobile Text to Completion
+
+router.post('/v1/contact-textmsg', function (req, res) {
+    res.redirect('/v1/step-completion');
+})
 
 module.exports = router;

@@ -1,0 +1,12 @@
+
+// ************************************
+// blue box
+// ************************************
+
+.big-blue-box {
+    background: $color_nhsuk-blue;
+    color: $color_nhsuk-white;
+    &.center{
+        text-align: center;
+    }
+  }

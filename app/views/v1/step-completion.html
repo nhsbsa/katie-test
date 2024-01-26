@@ -2,11 +2,11 @@
 
 <!-- Add the following line to add to the class of the block content container  
 change the # to ∞ to uncomment -->
-{% set mainClasses = "nhsuk-u-padding-top-4" %} 
+{% set mainClasses = "nhsuk-u-padding-top-4" %}
 
 
 {% block pageTitle %}
-  Confirmation - Date of Birth | Testing Prototype - Katie Twinn  
+Confirmation - Date of Birth | Testing Prototype - Katie Twinn
 {% endblock %}
 
 {% block content %}
@@ -14,29 +14,60 @@ change the # to ∞ to uncomment -->
   <div class="nhsuk-grid-column-two-thirds">
 
     {{ backLink({
-      "href": "javascript:history.go(-1)",
-      "text": "Go back"
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
     }) }}
-    
 
-    <div class="nhsuk-card" style="background: #005EB8; margin-top: 0;">
+
+    <div class="nhsuk-card big-blue-box center">
       <div class="nhsuk-card__content">
-        <h1 class="nhsuk-card__heading" style="text-align: center; color: white;">
+        <h1 class="nhsuk-card__heading">
           Documents to support your query have been submitted
         </h1>
         <h2 class="nhsuk-card__heading nhsuk-u-font-weight-normal" style="text-align: center; color: white;">
-          Reference number: <span class="nhsuk-caption-xl nhsuk-caption--bottom nhsuk-u-font-weight-bold" style="color: white;">HDJ2123F</span>
+          Reference number: <span class="nhsuk-caption-xl nhsuk-caption--bottom nhsuk-u-font-weight-bold"
+            style="color: white;">HDJ2123F</span>
         </h2>
       </div>
     </div>
 
     <h2 class="nhsuk-heading-m">What happens next</h2>
 
-    <p>You'll get a response to your query within 2 working days.</p>     
+    <p>You'll get a response to your query within 2 working days via your chosen contact method.</p>
+
+    <hr>
+
+    <h3>Details</h3>
+
+    <dl class="nhsuk-summary-list">
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Chosen contact details:
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          <b>{{ data['email'] }}</b>
+          <b>{{ data['telephone'] }}</b>
+          <b>{{ data['textmsg'] }}</b>
+        </dd>
+      </div>
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          New Address:
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          <b>{{ data['newAddress'] }}</b>
+        </dd>
+      </div>
+
+    </dl>
+
+    <hr>
 
     <h2 class="nhsuk-heading-m">Give feedback</h2>
 
-    <p><a href="https://wh1.snapsurveys.com/s.asp?k=159241192074" target="_blank">What did you think of this service?<span class="nhsuk-u-visually-hidden"> (opens in a new window)</span></a> (takes 30 seconds).</p>
+    <p><a href="https://wh1.snapsurveys.com/s.asp?k=159241192074" target="_blank">What did you think of this
+        service?<span class="nhsuk-u-visually-hidden"> (opens in a new window)</span></a> (takes 30 seconds).</p>
 
 
 
@@ -44,4 +75,3 @@ change the # to ∞ to uncomment -->
 </div>
 
 {% endblock %}
-
