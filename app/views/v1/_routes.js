@@ -99,7 +99,7 @@ router.post('/v1/previous-address', function (req, res) {
     if (previousAddressLine1 && previousTownOrCity && previousPostcodeManual) {
         res.redirect('/v1/step-1-name');
     } else {
-        res.redirect('/v1/previous-address');
+        res.redirect('/v1/step-5-new-address');
     }
 
 })
@@ -115,6 +115,7 @@ router.post('/v1/select-previous-address', function (req, res) {
     }
 
 })
+
 
 // Find your new address
 
@@ -174,7 +175,7 @@ router.post('/v1/new-address', function (req, res) {
     if (newAddressLine1 && newTownOrCity && newPostcodeManual) {
         res.redirect('/v1/step-1-name');
     } else {
-        res.redirect('/v1/new-address');
+        res.redirect('/v1/confirm');
     }
 
 })
@@ -200,6 +201,12 @@ router.post('/v1/confirm', function (req, res) {
     } else {
         res.redirect('/v1/confirm');
     }
+
+})
+
+router.post('/v1/new-address', function (req, res) {
+
+    res.redirect('/v1/confirm');
 
 })
 
@@ -231,14 +238,14 @@ router.post('/v1/contact-method', function (req, res) {
     var contactMethod = req.session.data['contact'];
 
     if (contactMethod == "By Email") {
-        res.redirect('/v1/contact-email');
+        res.redirect('/v1/step-completion');
 
     } 
     if (contactMethod == "By Telephone") {
-        res.redirect('/v1/contact-telephone');
+        res.redirect('/v1/step-completion');
     } 
     if (contactMethod == "By Text Message") {
-        res.redirect('/v1/contact-textmsg');
+        res.redirect('/v1/step-completion');
     } 
     if (contactMethod == "By Post") {
         res.redirect('/v1/step-completion');

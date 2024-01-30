@@ -92,7 +92,8 @@ Check and Review - Date of Birth | Testing Prototype - Katie Twinn
           {% if (data['previousAddress']) %}
           {{ data['previousAddress'] }}
           {% else %}
-          NHS BSA, STELLA HOUSE, GOLDCREST WAY, NEWCASTLE UPON TYNE, NE15 8NY
+          {{data['previous-address-line-1']}}, {{data['previous-address-line-2']}}, {{data['previous-address-town']}},
+          {{data['previous-address-county']}}, {{data['previous-address-postcode']}}
           {% endif %}
         </dd>
 
@@ -120,7 +121,8 @@ Check and Review - Date of Birth | Testing Prototype - Katie Twinn
           {% if (data['newAddress']) %}
           {{ data['newAddress'] }}
           {% else %}
-          NORTH EAST STRATEGIC HEALTH AUTHORITY, 4 THE WATERFRONT, GOLDCREST WAY, NEWCASTLE UPON TYNE, NE15 8NY
+          {{data['new-address-line-1']}}, {{data['new-address-line-2']}}, {{data['new-address-town']}},
+          {{data['new-address-county']}}, {{data['new-address-postcode']}}
           {% endif %}
         </dd>
 

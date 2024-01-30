@@ -25,9 +25,43 @@ Preferred Method of Contact | Testing Prototype - Katie Twinn
 
     <form action="v1/contact-method" method="post" novalidate>
 
+      {% set emailHtml %}
+      {{ input({
+      id: "email",
+      name: "email",
+      classes: "nhsuk-u-width-two-thirds",
+      label: {
+      text: "Email address"
+      }
+      }) }}
+      {% endset -%}
+
+      {% set phoneHtml %}
+      {{ input({
+      id: "phone",
+      name: "phone",
+      classes: "nhsuk-u-width-two-thirds",
+      label: {
+      text: "Phone number"
+      }
+      }) }}
+      {% endset -%}
+
+      {% set mobileHtml %}
+      {{ input({
+      id: "mobile",
+      name: "mobile",
+      classes: "nhsuk-u-width-two-thirds",
+      label: {
+      text: "Mobile phone number"
+      }
+      }) }}
+      {% endset -%}
+
       {{ radios({
       "idPrefix": "contact",
       "name": "contact",
+      "value": "contact",
       "fieldset": {
       "legend": {
       "text": "Please contact me ...",
@@ -36,29 +70,29 @@ Preferred Method of Contact | Testing Prototype - Katie Twinn
       }
       },
       "hint": {
-        "text": "Select one option"
+      "text": "Select one option"
       },
       "items": [
       {
       "value": "By Email",
       "text": "By Email",
       "conditional": {
-        "html": emailHtml
+      "html": emailHtml
       }
       },
       {
       "value": "By Telephone",
       "text": "By Telephone",
       "conditional": {
-        "html": phoneHtml
+      "html": phoneHtml
       }
       },
       {
-        "value": "By Text Message",
-        "text": "By Text Message",
-        "conditional": {
-          "html": mobileHtml
-        }
+      "value": "By Text Message",
+      "text": "By Text Message",
+      "conditional": {
+      "html": mobileHtml
+      }
       },
       {
       "value": "By Post",

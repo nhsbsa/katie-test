@@ -31,13 +31,7 @@ Confirmation - Date of Birth | Testing Prototype - Katie Twinn
       </div>
     </div>
 
-    <h2 class="nhsuk-heading-m">What happens next</h2>
-
-    <p>You'll get a response to your query within 2 working days via your chosen contact method.</p>
-
-    <hr>
-
-    <h3>Details</h3>
+    <h2 class="nhsuk-heading-m">Details</h2>
 
     <dl class="nhsuk-summary-list">
 
@@ -46,21 +40,30 @@ Confirmation - Date of Birth | Testing Prototype - Katie Twinn
           Chosen contact details:
         </dt>
         <dd class="nhsuk-summary-list__value">
-          <b>{{ data['email'] }}</b>
-          <b>{{ data['telephone'] }}</b>
-          <b>{{ data['textmsg'] }}</b>
-        </dd>
-      </div>
-      <div class="nhsuk-summary-list__row">
-        <dt class="nhsuk-summary-list__key">
-          New Address:
-        </dt>
-        <dd class="nhsuk-summary-list__value">
-          <b>{{ data['newAddress'] }}</b>
+          {% if data['email'] %}By email - {{ data['email'] }}{% endif %}
+          {% if data['phone'] %}By telephone - {{ data['phone'] }}{% endif %}
+          {% if data['mobile'] %}By text message - {{ data['mobile'] }}{% endif %}
+
+          {% if data['contact'] === 'By Post' %}
+            By Post 
+            {% if (data['newAddress']) %}
+            {{ data['newAddress'] }}
+            {% else %}
+            {{data['new-address-line-1']}} {{data['new-address-line-2']}} {{data['new-address-town']}} {{data['new-address-county']}} {{data['new-address-postcode']}}
+            {% endif %}
+          {% endif %}
         </dd>
       </div>
 
     </dl>
+
+    <h2 class="nhsuk-heading-m">What happens next</h2>
+
+    {% if data['contact'] === 'By Post' %}
+    <p>A letter will be posted out to your new address within 2 working days to confirm your account has been updated.</p>
+    {% else %}
+    <p>You'll get a response to your query within 2 working days via your chosen contact method.</p>
+    {% endif %}
 
     <hr>
 
