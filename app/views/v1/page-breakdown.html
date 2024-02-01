@@ -1,0 +1,477 @@
+{% extends 'layout.html' %}
+
+<!-- Add the following line to add to the class of the block content container  
+change the # to ∞ to uncomment -->
+{% set mainClasses = "nhsuk-u-padding-top-4" %}
+
+
+{% block pageTitle %}
+Page by page breakdown | Testing Prototype - Katie Twinn
+{% endblock %}
+
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-1">Page by page breakdown</h1>
+    <p class="secondaryColour nhsuk-body-l">Change of address</p>
+
+    <table role="table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-9">
+      <caption class="nhsuk-table__caption">General</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+            Page
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Title
+          </th>
+          <th role="columnheader" class="" scope="col">
+            URL
+          </th>
+          <th role="columnheader" class="" scope="col">
+            JIRA
+          </th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/introdcution">Introduction</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Test Prototype Introduction Page
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/introduction
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/start">Start</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Process a Change of Address
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/start
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <table role="table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-9">
+      <caption class="nhsuk-table__caption">Personal Information</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+            Page
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Title
+          </th>
+          <th role="columnheader" class="" scope="col">
+            URL
+          </th>
+          <th role="columnheader" class="" scope="col">
+            JIRA
+          </th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-1-name">Name</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>What is your name?
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-1-name
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-2-nhsnumber">NHS Number</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>What is your NHS Number?
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-2-nhsnumber
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-3-dob">Date of Birth</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>What is your date of birth?
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-3-dob
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table role="table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-9">
+      <caption class="nhsuk-table__caption">Address Details</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+            Page
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Title
+          </th>
+          <th role="columnheader" class="" scope="col">
+            URL
+          </th>
+          <th role="columnheader" class="" scope="col">
+            JIRA
+          </th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-4-previous-address">Step 4 - Previous Address</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Use the postcode lookup to find your previous address, alternatively click the link to enter your previous address manually 
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-4-previous-address
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/select-previous-address">Select Previous Address</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Select your previous address from the list 
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/select-previous-address
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/no-previous-address-found">No Previous Address Found</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Users address cannot be found using the postcode lookup, click the link to enter your previous address manually 
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/no-previous-address-found
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/previous-address">Enter Previous Address Manually </a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Enter your previous address manually 
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/previous-address
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-4-previous-address">Step 5 - New Address</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Use the postcode lookup to find your previous address, alternatively click the link to enter your previous address manually 
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-5-new-address
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/select-new-address">Select New Address</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Select your new address from the list 
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/select-new-address
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/no-new-address-found">No New Address Found</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Users address cannot be found using the postcode lookup, click the link to enter your new address manually 
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/no-new-address-found
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/new-address">Enter New Address Manually </a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Enter your new address manually 
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/new-address
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/confirm">Confirm New Address</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Check both addresses and confirm the change
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/confirm
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <table role="table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-9">
+      <caption class="nhsuk-table__caption">Supporting Documents</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+            Page
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Title
+          </th>
+          <th role="columnheader" class="" scope="col">
+            URL
+          </th>
+          <th role="columnheader" class="" scope="col">
+            JIRA
+          </th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-6-supporting-document">Step 6 - Supporting Documents</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Upload a supporting document to confirm new address
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-6-supporting-document
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-by-step-guide-step-1">Guide - 1</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Step by Step Guide - Step 1
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-by-step-guide-step-1
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-by-step-guide-step-2">Guide - 2</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Step by Step Guide - Step 2
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-by-step-guide-step-2
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-by-step-guide-step-3">Guide - 3</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Step by Step Guide - Step 3
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-by-step-guide-step-3
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-by-step-guide-step-4">Guide - 4</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Step by Step Guide - Step 4
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-by-step-guide-step-4
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-by-step-guide-step-5">Guide - 5</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Step by Step Guide - Step 5
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-by-step-guide-step-5
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-7-documents-added">Step 7 - Documents Added</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Confirmation of document upload and option to upload another
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-7-documents-added
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table role="table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-9">
+      <caption class="nhsuk-table__caption">Final Confirmation</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+            Page
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Title
+          </th>
+          <th role="columnheader" class="" scope="col">
+            URL
+          </th>
+          <th role="columnheader" class="" scope="col">
+            JIRA
+          </th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-review">Review</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Review - Check your answers
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-review
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/contact-method">Preferred Contact Method</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Choose preferred contact method - email, phone, text, post
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/contact-method
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Page </span><a href="/step-completion">Completion</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Title </span>Final confirmation - User reference number and confirmation of contact method
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">URL </span>/step-completion
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">JIRA </span><a href="#">Link</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a class="nhsuk-action-link__link" href="/v1/introduction">
+      <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+      </svg>
+      <span class="nhsuk-action-link__text">Full Run Through</span>
+    </a>
+
+  </div>
+</div>
+
+{% endblock %}
